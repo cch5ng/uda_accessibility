@@ -19,7 +19,14 @@ page('/:slug', function(context) {
   newMenuItem.classList.add('is-active');
   newPage.classList.add('is-active');
 
-  // instructor method
+  // instructor method to avoid resetting focus on first page visit
+  let isFirstPage = true;
+  if (isFirstPage) {
+    isFirstPage = false;
+    return;
+  }
+
+  // instructor method to reset focus after nav link click
   newPage.querySelector('h2').focus();
 
   //  let heading = document.querySelector('main [data-page='+slug+'] h2');
