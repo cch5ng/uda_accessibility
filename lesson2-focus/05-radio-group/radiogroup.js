@@ -32,15 +32,11 @@
         e.preventDefault();
 
         // This seems like a good place to do some stuff :)
-        this.focusedButton.setAttribute('checked', false);
-        this.focusedButton.setAttribute('tabIndex', -1);
         if (this.focusedIdx > 0) {
           this.focusedIdx -= 1;
         } else {
           this.focusedIdx = this.buttons.length - 1;
         }
-        this.focusedButton.setAttribute('checked', true);
-        this.focusedButton.setAttribute('tabIndex', 0);
 
         break;
 
@@ -50,15 +46,11 @@
       case VK_RIGHT: {
 
         e.preventDefault();
-        this.focusedButton.setAttribute('checked', false);
-        this.focusedButton.setAttribute('tabIndex', -1);
         if (this.focusedIdx < this.buttons.length - 1) {
           this.focusedIdx += 1;
         } else {
           this.focusedIdx = 0;
         }
-        this.focusedButton.setAttribute('checked', true);
-        this.focusedButton.setAttribute('tabIndex', 0);
 
         // This seems like a good place to do some stuff :)
 
