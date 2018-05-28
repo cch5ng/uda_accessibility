@@ -170,6 +170,11 @@
                 this.hide();
             } else {
                 // FIXME: ChromeVox reports the wrong list size and position
+                let setsize = this.visibleItems.length;
+                this.visibleItems.forEach((it, idx) => {
+                    it.setAttribute('setsize', setsize);
+                    it.setAttribute('posinset', idx + 1);
+                })
             }
         },
 
@@ -237,6 +242,10 @@
             newActive.classList.add('active');
 
             // FIXME: need to ensure focus stays on textbox, but report active list option
+            // not sure about this?
+            this.textbox.setActiveDescendant(newActive);
+
+
         }
     };
 
