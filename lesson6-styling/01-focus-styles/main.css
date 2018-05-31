@@ -18,7 +18,7 @@ a:focus {
 
 .nav > li > a:focus,
 .nav > li > a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   background: transparent;
   background-color: #cccccc;
   color: #ff0000;
@@ -33,6 +33,7 @@ a:focus {
 .jumbotron .mdl-button:hover {
   background-color: #c20144;
   color: #999999;
+  text-decoration: underline;
 }
 
 .mdl-button.raised {
@@ -46,6 +47,7 @@ a:focus {
   box-shadow: 0 2px 2px 0 rgba(194, 1, 68, .14),
               0 3px 1px -2px rgba(194, 1, 68, .2),
               0 1px 5px 0 rgba(194, 1, 68, .12);
+  text-decoration: underline;
 }
 
 
